@@ -1,0 +1,51 @@
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: white;
+    background-color: var(--violet);
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.container li {
+    list-style: none;
+    display: inline-block;
+}
+
+.container a {
+    color: white;
+}
+
+.card {
+    display: flex;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: cyan;
+}
