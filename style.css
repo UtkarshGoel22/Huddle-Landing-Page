@@ -19,7 +19,8 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1250px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -29,17 +30,74 @@ body {
     font-weight: 600;
 }
 
+.container ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
 .container li {
     list-style: none;
-    display: inline-block;
 }
 
 .container a {
+    color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.container a:hover {
+    background-color: var(--soft-magenta);
     color: white;
 }
 
 .card {
     display: flex;
+}
+
+.card-left img {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.card-right h1 {
+    font-size: 2.2rem;
+    line-height: 3.5rem
+}
+
+.card-right p {
+    line-height: 1.5rem;
+}
+
+.card-right button {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    border: none;
+    color: var(--violet);
+    font-size: 20px;
+    padding: 18px 80px;
+    margin-top: 18px;
+}
+
+.card-right button:hover {
+    background-color: var(--soft-magenta);
+    color: white;
+    cursor: pointer;
+}
+
+.card-right {
+    padding-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .attribution { 
@@ -48,4 +106,47 @@ body {
 }
 .attribution a { 
     color: cyan;
+}
+
+@media (max-width: 1100px) {
+    body {
+        background-image: url(./images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .container .logo {
+        max-width: 55%;
+    }
+    .container ul {
+        padding: 0;
+        margin: 50px 0 50px 0;
+        justify-content: center;
+    }
+    .container a {
+        margin: 5px;
+    }
+    .card {
+        flex-direction: column;
+    }
+    .card-left img {
+        max-width: 100%;
+        padding: 0;
+        margin: 50px 0 50px 0;
+    }
+    .card-left {
+        padding: 0;
+        margin: auto;
+    }
+    .card-right {
+        padding: 0;
+        margin: auto;
+        text-align: center;
+    }
+    .card-right h1 {
+        font-size: 2rem;
+    }
 }
